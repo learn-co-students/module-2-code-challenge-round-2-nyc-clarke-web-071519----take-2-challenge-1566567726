@@ -1,0 +1,13 @@
+<h1>Episode #<%=@episode.number%></h1>
+<ul>
+
+<!--I'd like to set this up to link directly to an episode's show page. I think what I need to do is pull up the episode_id.
+
+I can call Guest.first.appearances.first.episode_id, for example.-->
+
+<!--That might mean nested .each loops, but not sure exactly how to implement that.-->
+
+    <%@episode.guests.each do |guest| %>
+    <li><%=link_to guest.name, episode_path()%></li>
+    <%end%>
+</ul>
